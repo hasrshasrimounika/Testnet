@@ -1,2 +1,1 @@
 C:\Harsha\Testnet\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
-C:\Harsha\Testnet\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
