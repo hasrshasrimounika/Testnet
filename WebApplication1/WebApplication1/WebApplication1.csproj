@@ -1,0 +1,537 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EAD3B4C-254A-46FD-AA63-02364614277E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44372</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddManager.aspx.cs">
+      <DependentUpon>AddManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.master.cs">
+      <DependentUpon>AdminMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_chapswd.aspx.cs">
+      <DependentUpon>Admin_chapswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangPassword.aspx.cs">
+      <DependentUpon>ChangPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\edit_manager.aspx.cs">
+      <DependentUpon>edit_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\view managers.aspx.cs">
+      <DependentUpon>view managers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\BAL\Mailing.cs" />
+    <Content Include="App_Code\DAL\clsConnection.cs" />
+    <Content Include="App_Code\DAL\SQLHelper.cs" />
+    <Compile Include="FinancialManager\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\FinacialManager.master.cs">
+      <DependentUpon>FinacialManager.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\Update Profile.aspx.cs">
+      <DependentUpon>Update Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\VehicleBilling.aspx.cs">
+      <DependentUpon>VehicleBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\VenderBilling.aspx.cs">
+      <DependentUpon>VenderBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialManager\viewprofile.aspx.cs">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forget Password.aspx.cs">
+      <DependentUpon>Forget Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\BatchDetails.aspx.cs">
+      <DependentUpon>BatchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\DeleteEmp.aspx.cs">
+      <DependentUpon>DeleteEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\EditEmpDetails.aspx.cs">
+      <DependentUpon>EditEmpDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\Edit_shifttimeings.aspx.cs">
+      <DependentUpon>Edit_shifttimeings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\EmpRegistration.aspx.cs">
+      <DependentUpon>EmpRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\HRlogin.aspx.cs">
+      <DependentUpon>HRlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\HRMasterPage.master.cs">
+      <DependentUpon>HRMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ShiftSchedule.aspx.cs">
+      <DependentUpon>ShiftSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ShiftScheduleDetails.aspx.cs">
+      <DependentUpon>ShiftScheduleDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ShiftTiming.aspx.cs">
+      <DependentUpon>ShiftTiming.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ViewBatchDetails.aspx.cs">
+      <DependentUpon>ViewBatchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ViewEmp.aspx.cs">
+      <DependentUpon>ViewEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ViewEmpDetails.aspx.cs">
+      <DependentUpon>ViewEmpDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ViewProfile.aspx.cs">
+      <DependentUpon>ViewProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\Viewshiftschdule.aspx.cs">
+      <DependentUpon>Viewshiftschdule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HRManager\ViewShiftTimings.aspx.cs">
+      <DependentUpon>ViewShiftTimings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\Delete Vender Details.aspx.cs">
+      <DependentUpon>Delete Vender Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\DeleteVehicles.aspx.cs">
+      <DependentUpon>DeleteVehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\edit vender.aspx.cs">
+      <DependentUpon>edit vender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\Editvehicledetails.aspx.cs">
+      <DependentUpon>Editvehicledetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\Maintainance.master.cs">
+      <DependentUpon>Maintainance.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\SparePartDetails.aspx.cs">
+      <DependentUpon>SparePartDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\VechicleDetails.aspx.cs">
+      <DependentUpon>VechicleDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\VehicleAllocation.aspx.cs">
+      <DependentUpon>VehicleAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\VendorDetails.aspx.cs">
+      <DependentUpon>VendorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\View Driver Details.aspx.cs">
+      <DependentUpon>View Driver Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\View Vender Details.aspx.cs">
+      <DependentUpon>View Vender Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\viewprofile.aspx.cs">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceManager\ViewVehicledetails.aspx.cs">
+      <DependentUpon>ViewVehicledetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\CityDetails.aspx.cs">
+      <DependentUpon>CityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\DeleteCitydetails.aspx.cs">
+      <DependentUpon>DeleteCitydetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\DriverShiftDetails.aspx.cs">
+      <DependentUpon>DriverShiftDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\EditCityDetails.aspx.cs">
+      <DependentUpon>EditCityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\MovementManager.master.cs">
+      <DependentUpon>MovementManager.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\RouteDetails.aspx.cs">
+      <DependentUpon>RouteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\SearchRouteDetails.aspx.cs">
+      <DependentUpon>SearchRouteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\TripSheet.aspx.cs">
+      <DependentUpon>TripSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\Update Profile.aspx.cs">
+      <DependentUpon>Update Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\VehicleAllocationDetails.aspx.cs">
+      <DependentUpon>VehicleAllocationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\VehicleSearch.aspx.cs">
+      <DependentUpon>VehicleSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\View Profile.aspx.cs">
+      <DependentUpon>View Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovementManager\ViewCityDetails.aspx.cs">
+      <DependentUpon>ViewCityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="car.swf" />
+    <Content Include="Forget Password.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="MovementManager\ChangePassword.aspx" />
+    <Content Include="MovementManager\CityDetails.aspx" />
+    <Content Include="MovementManager\cool cabs copy.jpg" />
+    <Content Include="MovementManager\DeleteCitydetails.aspx" />
+    <Content Include="MovementManager\DriverShiftDetails.aspx" />
+    <Content Include="MovementManager\EditCityDetails.aspx" />
+    <Content Include="MovementManager\Home.aspx" />
+    <Content Include="MovementManager\RouteDetails.aspx" />
+    <Content Include="MovementManager\SearchRouteDetails.aspx" />
+    <Content Include="MovementManager\TripSheet.aspx" />
+    <Content Include="MovementManager\Update Profile.aspx" />
+    <Content Include="MovementManager\VehicleAllocationDetails.aspx" />
+    <Content Include="MovementManager\VehicleSearch.aspx" />
+    <Content Include="MovementManager\View Profile.aspx" />
+    <Content Include="MovementManager\ViewCityDetails.aspx" />
+    <Content Include="obj\Debug\WebApplication1.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebApplication1.dll" />
+    <Content Include="obj\Debug\WebApplication1.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AddManager.aspx" />
+    <Content Include="Admin\Admin_chapswd.aspx" />
+    <Content Include="Admin\Car-Alloy-Wheel-HX109-.jpg" />
+    <Content Include="Admin\car.swf" />
+    <Content Include="Admin\ChangPassword.aspx" />
+    <Content Include="Admin\cool cabs copy.jpg" />
+    <Content Include="Admin\Delete.aspx" />
+    <Content Include="Admin\edit_manager.aspx" />
+    <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\home.jpg" />
+    <Content Include="Admin\hrmanager.jpg" />
+    <Content Include="Admin\main.jpg" />
+    <Content Include="Admin\MITSU_LANCER_EVO_05.JPG" />
+    <Content Include="Admin\Untitled-2 copy.jpg" />
+    <Content Include="Admin\view managers.aspx" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\WebApplication1.dll" />
+    <Content Include="bin\WebApplication1.pdb" />
+    <Content Include="FinancialManager\ChangePassword.aspx" />
+    <Content Include="FinancialManager\cool cabs copy.jpg" />
+    <Content Include="FinancialManager\Home.aspx" />
+    <Content Include="FinancialManager\Update Profile.aspx" />
+    <Content Include="FinancialManager\VehicleBilling.aspx" />
+    <Content Include="FinancialManager\VenderBilling.aspx" />
+    <Content Include="FinancialManager\viewprofile.aspx" />
+    <Content Include="HRManager\BatchDetails.aspx" />
+    <Content Include="HRManager\changepassword.aspx" />
+    <Content Include="HRManager\cool cabs copy.jpg" />
+    <Content Include="HRManager\DeleteEmp.aspx" />
+    <Content Include="HRManager\EditEmpDetails.aspx" />
+    <Content Include="HRManager\Edit_shifttimeings.aspx" />
+    <Content Include="HRManager\EmpRegistration.aspx" />
+    <Content Include="HRManager\home.aspx" />
+    <Content Include="HRManager\HRlogin.aspx" />
+    <Content Include="HRManager\ShiftSchedule.aspx" />
+    <Content Include="HRManager\ShiftScheduleDetails.aspx" />
+    <Content Include="HRManager\ShiftTiming.aspx" />
+    <Content Include="HRManager\UpdateProfile.aspx" />
+    <Content Include="HRManager\ViewBatchDetails.aspx" />
+    <Content Include="HRManager\ViewEmp.aspx" />
+    <Content Include="HRManager\ViewEmpDetails.aspx" />
+    <Content Include="HRManager\ViewProfile.aspx" />
+    <Content Include="HRManager\Viewshiftschdule.aspx" />
+    <Content Include="HRManager\ViewShiftTimings.aspx" />
+    <Content Include="MaintenanceManager\ChangePassword.aspx" />
+    <Content Include="MaintenanceManager\cool cabs copy.jpg" />
+    <Content Include="MaintenanceManager\Delete Vender Details.aspx" />
+    <Content Include="MaintenanceManager\DeleteVehicles.aspx" />
+    <Content Include="MaintenanceManager\edit vender.aspx" />
+    <Content Include="MaintenanceManager\Editvehicledetails.aspx" />
+    <Content Include="MaintenanceManager\Home.aspx" />
+    <Content Include="MaintenanceManager\SparePartDetails.aspx" />
+    <Content Include="MaintenanceManager\UpdateProfile.aspx" />
+    <Content Include="MaintenanceManager\VechicleDetails.aspx" />
+    <Content Include="MaintenanceManager\VehicleAllocation.aspx" />
+    <Content Include="MaintenanceManager\VendorDetails.aspx" />
+    <Content Include="MaintenanceManager\View Driver Details.aspx" />
+    <Content Include="MaintenanceManager\View Vender Details.aspx" />
+    <Content Include="MaintenanceManager\viewprofile.aspx" />
+    <Content Include="MaintenanceManager\ViewVehicledetails.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminMasterPage.master" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\WebApplication1.dll.config" />
+    <Content Include="DATA BASE\cool cabs.bak" />
+    <Content Include="FinancialManager\FinacialManager.master" />
+    <Content Include="HRManager\HRMasterPage.master" />
+    <Content Include="MaintenanceManager\Maintainance.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MovementManager\MovementManager.master" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\WebApplication1.csproj.CopyComplete" />
+    <Content Include="obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\WebApplication1.csprojAssemblyReference.cache" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63859</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44372/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
