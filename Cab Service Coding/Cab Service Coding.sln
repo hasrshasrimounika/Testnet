@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Cab Service Coding", ".", "{FDC186A8-3A13-434A-B296-09873414728E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50966"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Harsha\Cab-Management-System-ASP.NET-Project\Cab Management System ASP.NET Project\Cab Service Coding\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50966\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50966"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\Harsha\Cab-Management-System-ASP.NET-Project\Cab Management System ASP.NET Project\Cab Service Coding\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50966\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50966"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC186A8-3A13-434A-B296-09873414728E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC186A8-3A13-434A-B296-09873414728E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7925D1A6-AF8D-40DA-B2D5-57C1C7954A0A}
+	EndGlobalSection
+EndGlobal
